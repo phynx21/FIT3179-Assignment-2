@@ -1,0 +1,9 @@
+{
+  "type": "d3-cloud",
+  "csv": "data/top_tags.csv",
+  "width": 900,
+  "height": 500,
+  "minFont": 20,
+  "maxFont": 80,
+  "colors": ["#6CBEED", "#1B065E"]
+}

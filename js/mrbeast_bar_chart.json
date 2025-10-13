@@ -1,0 +1,49 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Top 10 MrBeast videos by view count",
+  "width": 400,
+  "height": 400,
+  "data": {
+    "url": "data/MrBeast_top10_videos.csv",
+    "format": {"type": "csv"}
+  },
+  "transform": [
+    {
+      "calculate": "toNumber(datum.viewCount)",
+      "as": "viewCount_num"
+    }
+  ],
+  "mark": "bar",
+  "encoding": {
+    "y": {
+      "field": "title",
+      "type": "ordinal",
+      "sort": {"field": "viewCount_num", "op": "max", "order": "descending"},
+      "axis": {"title": "Video Title"}
+    },
+    "x": {
+      "field": "viewCount_num",
+      "type": "quantitative",
+      "axis": {"title": "Views", "labelAngle": -45},
+      "scale": {"domainMin": 0}
+    },
+    "tooltip": [
+      {"field": "title", "type": "nominal", "title": "Video Title"},
+      {
+        "field": "viewCount_num",
+        "type": "quantitative",
+        "title": "Views",
+        "format": ","
+      },
+      {
+        "field": "publishTime",
+        "type": "temporal",
+        "title": "Date Published",
+        "format" : "%d %b %Y"
+      }
+    ],
+    "color": {
+      "value": "#1f77b4"
+    }
+  }
+}

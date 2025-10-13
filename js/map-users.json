@@ -1,0 +1,45 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "width": 700,
+  "height": 450,
+  "data": {
+    "url": "data/world_50m.geo.json",
+    "format": { "type": "json", "property": "features" }
+  },
+  "transform": [
+    {
+      "lookup": "properties.iso_a2",
+      "from": {
+        "data": { "url": "data/youtube-users-by-country-2025-clean.csv", "format": { "type": "csv" } },
+        "key": "flagCode",
+        "fields": ["TotalUsers2024Feb"]
+      }
+    },
+    {
+      "calculate": "toNumber(datum.TotalUsers2024Feb)",
+      "as": "TotalUsers2024Feb_num"
+    },
+    {
+      "calculate": "isFinite(datum.TotalUsers2024Feb_num) ? datum.TotalUsers2024Feb_num : 0",
+      "as": "TotalUsers2024Feb_for_color"
+    },
+    {
+      "calculate": "isFinite(datum.TotalUsers2024Feb_num) ? format(datum.TotalUsers2024Feb_num, ',') : 'N/A'",
+      "as": "TotalUsers2024Feb_tooltip"
+    }
+  ],
+  "projection": { "type": "equalEarth" },
+  "mark": { "type": "geoshape", "stroke": "white" },
+  "encoding": {
+    "color": {
+      "field": "TotalUsers2024Feb_for_color",
+      "type": "quantitative",
+      "scale": { "scheme": "blues", "domainMin": 0 },
+      "title": "Number of Users in February 2024 per Country"
+    },
+    "tooltip": [
+      { "field": "properties.name", "type": "nominal", "title": "Country" },
+      { "field": "TotalUsers2024Feb_tooltip", "type": "nominal", "title": "Total Number of Users" }
+    ]
+  }
+}

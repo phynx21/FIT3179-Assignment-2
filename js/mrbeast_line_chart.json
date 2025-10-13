@@ -1,0 +1,91 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "description": "MrBeast YouTube view counts aggregated by month with brushing and a linear growth trend.",
+  "data": {
+    "url": "data/MrBeast_youtube_stats.csv"
+  },
+  "transform": [
+    { "calculate": "toDate(datum.publishTime)", "as": "publishDate" },
+    { "calculate": "toNumber(datum.viewCount)", "as": "views" },
+    {
+      "timeUnit": "yearmonth",
+      "field": "publishDate",
+      "as": "month"
+    },
+    {
+      "aggregate": [
+        { "op": "mean", "field": "views", "as": "avg_views" },
+        { "op": "count", "field": "id", "as": "video_count" }
+      ],
+      "groupby": ["month"]
+    }
+  ],
+  "vconcat": [
+    {
+      "width": 800,
+      "height": 350,
+      "layer": [
+        {
+          "mark": { "type": "line", "color": "#005e91", "opacity": 0.9 },
+          "encoding": {
+            "x": {
+              "field": "month",
+              "type": "temporal",
+              "title": "Publish Month",
+              "axis": { "format": "%b %Y", "labelAngle": -45 },
+              "scale": { "domain": { "param": "brush" } }
+            },
+            "y": {
+              "field": "avg_views",
+              "type": "quantitative",
+              "title": "Average Views per Video"
+            },
+            "tooltip": [
+              { "field": "month", "type": "temporal", "title": "Month" },
+              { "field": "avg_views", "type": "quantitative", "title": "Average Views", "format": ",.0f"},
+              { "field": "video_count", "type": "quantitative", "title": "Videos Uploaded" }
+            ]
+          }
+        },
+        {
+          "mark": { "type": "line", "color": "#bc0000", "opacity": 0.4, "strokeWidth": 2},
+          "transform": [
+            {
+              "regression": "avg_views",
+              "on": "month",
+              "method": "linear"
+            }
+          ],
+          "encoding": {
+            "x": { "field": "month", "type": "temporal", "scale": { "domain": { "param": "brush" } } },
+            "y": { "field": "avg_views", "type": "quantitative" }
+          }
+        }
+      ]
+    },
+    {
+      "width": 800,
+      "height": 80,
+      "mark": { "type": "line", "color": "#1f77b4" },
+      "params": [
+        {
+          "name": "brush",
+          "select": { "type": "interval", "encodings": ["x"] }
+        }
+      ],
+      "encoding": {
+        "x": {
+          "field": "month",
+          "type": "temporal",
+          "title": "Select Time Range",
+          "axis": { "format": "%b %Y", "labelAngle": -45 }
+        },
+        "y": {
+          "field": "avg_views",
+          "type": "quantitative",
+          "axis": null
+        }
+      }
+    }
+  ]
+}

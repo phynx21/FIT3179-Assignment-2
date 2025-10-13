@@ -1,0 +1,276 @@
+{
+  "nodes": [
+    {
+      "id": "T-Series",
+      "label": "T-Series",
+      "size": 245.0,
+      "title": "T-Series<br>245,000,000.0 subscribers<br>Category: Music",
+      "color": "skyblue",
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "YouTube Movies",
+      "label": "YouTube Movies",
+      "size": 170.0,
+      "title": "YouTube Movies<br>170,000,000.0 subscribers<br>Category: Film & Animation",
+      "color": "skyblue",
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "MrBeast",
+      "label": "MrBeast",
+      "size": 166.0,
+      "title": "MrBeast<br>166,000,000.0 subscribers<br>Category: Entertainment",
+      "color": "skyblue",
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "Cocomelon - Nursery Rhymes",
+      "label": "Cocomelon - Nursery Rhymes",
+      "size": 162.0,
+      "title": "Cocomelon - Nursery Rhymes<br>162,000,000.0 subscribers<br>Category: Education",
+      "color": "skyblue",
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "SET India",
+      "label": "SET India",
+      "size": 159.0,
+      "title": "SET India<br>159,000,000.0 subscribers<br>Category: Shows",
+      "color": "skyblue",
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "Music",
+      "label": "Music",
+      "size": 119.0,
+      "title": "Music<br>119,000,000.0 subscribers<br>Category: Music",
+      "color": "skyblue",
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "Kids Diana Show",
+      "label": "Kids Diana Show",
+      "size": 112.0,
+      "title": "Kids Diana Show<br>112,000,000.0 subscribers<br>Category: People & Blogs",
+      "color": "skyblue",
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "PewDiePie",
+      "label": "PewDiePie",
+      "size": 111.0,
+      "title": "PewDiePie<br>111,000,000.0 subscribers<br>Category: Gaming",
+      "color": "skyblue",
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "Like Nastya",
+      "label": "Like Nastya",
+      "size": 106.0,
+      "title": "Like Nastya<br>106,000,000.0 subscribers<br>Category: People & Blogs",
+      "color": "skyblue",
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "Vlad and Niki",
+      "label": "Vlad and Niki",
+      "size": 98.9,
+      "title": "Vlad and Niki<br>98,900,000.0 subscribers<br>Category: Entertainment",
+      "color": "skyblue",
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "Zee Music Company",
+      "label": "Zee Music Company",
+      "size": 96.7,
+      "title": "Zee Music Company<br>96,700,000.0 subscribers<br>Category: Music",
+      "color": "skyblue",
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "WWE",
+      "label": "WWE",
+      "size": 96.0,
+      "title": "WWE<br>96,000,000.0 subscribers<br>Category: Sports",
+      "color": "skyblue",
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "Gaming",
+      "label": "Gaming",
+      "size": 93.6,
+      "title": "Gaming<br>93,600,000.0 subscribers<br>Category: Gaming",
+      "color": "skyblue",
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "BLACKPINK",
+      "label": "BLACKPINK",
+      "size": 89.8,
+      "title": "BLACKPINK<br>89,800,000.0 subscribers<br>Category: People & Blogs",
+      "color": "skyblue",
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "Goldmines",
+      "label": "Goldmines",
+      "size": 86.9,
+      "title": "Goldmines<br>86,900,000.0 subscribers<br>Category: Film & Animation",
+      "color": "skyblue",
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "Sony SAB",
+      "label": "Sony SAB",
+      "size": 83.0,
+      "title": "Sony SAB<br>83,000,000.0 subscribers<br>Category: Shows",
+      "color": "skyblue",
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "5-Minute Crafts",
+      "label": "5-Minute Crafts",
+      "size": 80.1,
+      "title": "5-Minute Crafts<br>80,100,000.0 subscribers<br>Category: Howto & Style",
+      "color": "skyblue",
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "BANGTANTV",
+      "label": "BANGTANTV",
+      "size": 75.6,
+      "title": "BANGTANTV<br>75,600,000.0 subscribers<br>Category: Music",
+      "color": "skyblue",
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "Sports",
+      "label": "Sports",
+      "size": 75.0,
+      "title": "Sports<br>75,000,000.0 subscribers<br>Category: Sports",
+      "color": "skyblue",
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "Justin Bieber",
+      "label": "Justin Bieber",
+      "size": 71.6,
+      "title": "Justin Bieber<br>71,600,000.0 subscribers<br>Category: Music",
+      "color": "skyblue",
+      "x": 0,
+      "y": 0
+    }
+  ],
+  "edges": [
+    {
+      "from": "MrBeast",
+      "to": "Vlad and Niki",
+      "color": "lightgray"
+    },
+    {
+      "from": "YouTube Movies",
+      "to": "Goldmines",
+      "color": "lightgray"
+    },
+    {
+      "from": "PewDiePie",
+      "to": "Gaming",
+      "color": "lightgray"
+    },
+    {
+      "from": "T-Series",
+      "to": "Music",
+      "color": "lightgray"
+    },
+    {
+      "from": "T-Series",
+      "to": "Zee Music Company",
+      "color": "lightgray"
+    },
+    {
+      "from": "T-Series",
+      "to": "BANGTANTV",
+      "color": "lightgray"
+    },
+    {
+      "from": "T-Series",
+      "to": "Justin Bieber",
+      "color": "lightgray"
+    },
+    {
+      "from": "Music",
+      "to": "Zee Music Company",
+      "color": "lightgray"
+    },
+    {
+      "from": "Music",
+      "to": "BANGTANTV",
+      "color": "lightgray"
+    },
+    {
+      "from": "Music",
+      "to": "Justin Bieber",
+      "color": "lightgray"
+    },
+    {
+      "from": "Zee Music Company",
+      "to": "BANGTANTV",
+      "color": "lightgray"
+    },
+    {
+      "from": "Zee Music Company",
+      "to": "Justin Bieber",
+      "color": "lightgray"
+    },
+    {
+      "from": "BANGTANTV",
+      "to": "Justin Bieber",
+      "color": "lightgray"
+    },
+    {
+      "from": "Kids Diana Show",
+      "to": "Like Nastya",
+      "color": "lightgray"
+    },
+    {
+      "from": "Kids Diana Show",
+      "to": "BLACKPINK",
+      "color": "lightgray"
+    },
+    {
+      "from": "Like Nastya",
+      "to": "BLACKPINK",
+      "color": "lightgray"
+    },
+    {
+      "from": "SET India",
+      "to": "Sony SAB",
+      "color": "lightgray"
+    },
+    {
+      "from": "WWE",
+      "to": "Sports",
+      "color": "lightgray"
+    }
+  ]
+}
