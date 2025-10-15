@@ -16,10 +16,6 @@
         {
             "calculate": "datum.category == null || datum.category == 'nan' ? 'Misc' : datum.category",
             "as": "category_clean"
-        },
-        {
-            "calculate": "datum.subscribers > 200000000 || datum['video views'] > 1e11 ? 'Outlier' : 'Normal'",
-            "as": "OutlierFlag"
         }
     ],
     "selection": {
@@ -82,21 +78,6 @@
                 ]
             }
         },
-        "shape": {
-            "field": "OutlierFlag",
-            "type": "nominal",
-            "scale": {
-                "domain": [
-                    "Normal",
-                    "Outlier"
-                ],
-                "range": [
-                    "circle",
-                    "triangle"
-                ]
-            },
-            "title": "Outlier"
-        },
         "size": {
             "field": "uploads",
             "type": "quantitative",
@@ -149,11 +130,6 @@
                 "field": "Country",
                 "type": "nominal",
                 "title": "Country"
-            },
-            {
-                "field": "OutlierFlag",
-                "type": "nominal",
-                "title": "Outlier?"
             }
         ]
     },
