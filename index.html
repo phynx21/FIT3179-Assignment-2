@@ -27,7 +27,7 @@
 
   <!-- Introduction body text -->
       <p style="text-align: left;">
-        YouTube is a platform where anyone can upload videos for others to watch, like and share. There is a wide range of content that includes entertainment, music, education, vlogs etc. It was founded on February 14 2005 created by Chad Hurley, Jawed Karim, and Steve Chen, who were former employees of PayPal. It is now owned by Google. 
+        YouTube is one of the largest video sharing platform in the world. It is a platform where anyone can upload videos for others to watch, like and share. There is a wide range of content that includes entertainment, music, education, vlogs etc. It was founded on February 14 2005 created by Chad Hurley, Jawed Karim, and Steve Chen, who were former employees of PayPal. It is now owned by Google. This webpage will explore data of the top performing channels, including MrBeast. In doing so, I hope aspiring YouTubers can use this for inspiration and gain a better understading for how to make a successful YouTube channel.
     </p>
 
       <!-- sidemen image -->
@@ -71,27 +71,27 @@
       {
         file: "js/map-penetration.json",
         title: "YouTube Penetration Rate by Country",
-        description: "This map shows the percentage of the population using YouTube in each country in February 2024. Bahrain has the highest penetration rate at 98.2%, Philippines the lowest at 24.5%, and Australia at 82.5%."
+        description: "This map shows the percentage of the population using YouTube in each country in February 2024 (penetration rate). Bahrain has the highest penetration rate at 98.2%, Philippines the lowest at 24.5%, and Australia at 82.5%. Even though India has the higest users in February 2024 at 462 million users, it only has a 61.5% penetration rate. This means that around 40% of the Indian population did not access YouTube in February 2024. Unfortunately, there is no data on the penetration rate for countries which has access to YouTube, such as Russia, countries in Africa and South America."
       },
       {
         file: "js/subcriber-flow-sankey.json",
         title: "Subscriber Flow",
-        description: "Sankey Diagram of subscriber flow from category to country to channel."
+        description: "This sankey diagram shows the flow of subscribers from the category, to the Country to the channel. We can see that music is the most subscribed category, sharing its subscribers in Australia, India, United Kingdom and Brazil. It also shows us the top 5 most subscribed channels in each country that is displayed. "
       },
       {
         file: "js/top20_youtubers_network.json",
-        title: "YouTube Network by Country",
-        description: "Network of the top 20 YouTubers by subscribers, with edges showing shared categories."
+        title: "YouTube Network by Category",
+        description: "Here is a network of the top 20 YouTube channels connected by category. It may be confusing, but 'Gaming', 'Sports', and 'Music' is a YouTube channel (at the time of writing), that includes a collection of such videos. We can see that T-Series, 'Music', BANGTANTV, Justin Bieber and Zee Music Company are all interconnected by the category, Music. On the other hand, 5-Minute Crafts is isolated as it is the only Howto & Style channel in the top 20 channels"
       },
       {
         file: "js/bubble-chart.json",
         title: "Most Subscribed YouTubers Statistics",
-        description: "Data on the most subscribed YouTubers. Zoom and pan for an interactive experience."
+        description: "Here, we can see data on the top 1000 subscribed YouTube channels. It may look like a paint splatter at first instance, but if you click on specific categories in the legend, you can focus on that category. You can zoom in and out, and pan for a more interactive experience. Also, notice how the graph starts at 10 million subscribers instead of zero. That's because the top 1000 channels all have at least 10 million subscribers. "
       },
       {
         file: "js/mrbeast_line_chart.json",
         title: "MrBeast's Performance over Time",
-        description: "From humble beginnings in 2012 to viral videos in 2022-2023, this chart shows MrBeast's views over time."
+        description: "From humble beginnings in 2012 to creating consistent viral videos, this line chart shows MrBeast's views over time. We can see there's a spike on November 2021 when he reached his peak. This was during the COVID pandemic when the YouTube viewership increased. Since then, there is a downwards trend in viewership, in which one of the factors may be due to the controversy in July 2024 about the poor conditions of MrBeast's competitions. However, he is still undeniably one of the most watched channels globally."
       },
       {
         file: "js/mrbeast_bar_chart.json",
@@ -199,9 +199,13 @@
         extraTextDiv.innerHTML = `
           The bar chart to the left shows the top 10 MrBeast videos of all time. We can see that 
           <a href="https://www.youtube.com/watch?v=se50viFJ0AQ" target="_blank">'Would you fly to Paris for a Baguette?'</a> has the most views at around 1.6 Billion views, followed by 
-          <a href="https://www.youtube.com/watch?v=2nHjU7M3j1U" target="_blank">'Giving iPhones Instead Of Candy on Halloween'</a> at around 1.5 Billion views and 
-          <a href="https://www.youtube.com/watch?v=abc123XYZ" target="_blank">'$100,000,000 Car Doors'</a> at around 1.2 Billion views.
-        `;
+          <a href="https://www.youtube.com/shorts/YlvcFJOE-OE" target="_blank">'Giving iPhones Instead Of Candy on Halloween'</a> at around 1.5 Billion views and 
+          <a href="https://www.youtube.com/shorts/IQxea9UB1nQ" target="_blank">'$100,000,000 Car Doors'</a> at around 1.2 Billion views.
+
+          We can see a reoccuring theme here. These videos are YouTube Shorts, which are essentially YouTube videos in a short, scrollable form, lasting less than 3 minutes long. So creating shorts can increases your chances to gain more exposure and views, but it will not increase your profits as much as long form videos.
+        `
+        
+        ;
         chartContainer.appendChild(extraTextDiv);
       }
 
@@ -338,7 +342,7 @@
 
             const gd = document.getElementById(idiomDivId);
             Plotly.newPlot(gd, [...edgeTraces, nodeTrace], {
-              title: idiom.title,
+              title: "Network of the top 20 YouTubers by subscribers, with edges showing shared categories.",
               xaxis: { visible: false },
               yaxis: { visible: false },
               showlegend: false,
