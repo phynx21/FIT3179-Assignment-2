@@ -53,7 +53,7 @@
         "color": {
           "field": "Penetration_num",
           "type": "quantitative",
-          "scale": { "scheme": "bluegreen", "domainMin": 0 },
+          "scale": { "scheme": "blues", "domainMin": 0 },
           "title": "YouTube Penetration Rate"
         },
         "tooltip": [

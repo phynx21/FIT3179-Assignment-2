@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <title>The YouTube Universe</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ancizar+Sans:ital,wght@0,100..1000;1,100..1000&family=BBH+Sans+Hegarty&family=Playwrite+US+Modern:wght@100..400&family=Satisfy&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <script src="https://d3js.org/d3.v7.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-cloud/1.2.5/d3.layout.cloud.min.js"></script>
@@ -22,8 +25,17 @@
   <div class="content-strip">
     <header>
       <h1>The YouTube Universe</h1>
-      <p>Author: Phoebe Ng</p>
-      <p>Date Published: 11 Oct 2025</p>
+    <div class="header-meta">
+      <span>Author: Phoebe Ng</span>      |       
+      <span>Date Published: 17 Oct 2025</span>
+    </div>
+      <p class="data-sources">
+        Data sources:
+        <a href="https://www.kaggle.com/datasets/arpitsinghaiml/youtube-user-by-country-2025" target="_blank"> Map Statistics </a> |
+        <a href="https://www.kaggle.com/datasets/adershkohli/global-you-tube-statistics" target="_blank">Global Statistics </a> |
+        <a href="https://www.kaggle.com/datasets/robikscube/mrbeast-youtube-stats-daily" target="_blank">MrBeast Data</a>
+      </p>
+    
 
   <!-- Introduction body text -->
       <p style="text-align: left;">
@@ -66,6 +78,7 @@
 
     const idioms = [
       { file: "js/word-cloud.json",
+        title: "YouTube Tags",
         description: "The above word cloud shows some tags from YouTube (US). We can see that 'Comedy' and 'Funny' are the top tags, indicating that youtube is mostly an entertainment platform in the United States. We can see some trends YouTube has popularised, such as cat videos, GRWMs, ASMR, and 'try not to laugh' challenges."
       },
       {
@@ -86,7 +99,7 @@
       {
         file: "js/bubble-chart.json",
         title: "Most Subscribed YouTubers Statistics",
-        description: "Here, we can see data on the top 1000 subscribed YouTube channels. It may look like a paint splatter at first instance, but if you click on specific categories in the legend, you can focus on that category. You can zoom in and out, and pan for a more interactive experience. Also, notice how the graph starts at 10 million subscribers instead of zero. That's because the top 1000 channels all have at least 10 million subscribers. "
+        description: "Here, we can see data on the top 1000 subscribed YouTube channels. It may look like a paint splatter at first instance, but if you <b>click on specific categories in the legend</b>, you can focus on that category. You can <b>zoom in</b> and <b>out</b>, and <b>pan</b> for a more interactive experience. Also, notice how the graph starts at 10 million subscribers instead of zero. That's because the top 1000 channels all have at least 10 million subscribers. "
       },
       {
         file: "js/mrbeast_line_chart.json",
@@ -122,12 +135,12 @@
     const mrbeastSection = document.createElement('div');
     mrbeastSection.id = "mrbeast-section";
     mrbeastSection.style.width = "80%";
-    mrbeastSection.style.maxWidth = "700px";
+    mrbeastSection.style.maxWidth = "1000px";
     mrbeastSection.style.margin = "60px auto";
     mrbeastSection.style.textAlign = "left";
 
     mrbeastSection.innerHTML = `
-      <h2 style="text-align: center;">MrBeast</h2>
+  <h2 style="font-size: 40px; font-family: 'Ancizar Sans', sans-serif; text-align: center;">MrBeast</h2>
       <p style="font-size: 16px; line-height: 1.5;">
         Jimmy Donaldson, known online as <strong>MrBeast</strong>, is an American YouTuber and philanthropist 
         known for his elaborate challenges, massive giveaways, and large-scale stunts. He’s one of the most 
@@ -202,7 +215,7 @@
           <a href="https://www.youtube.com/shorts/YlvcFJOE-OE" target="_blank">'Giving iPhones Instead Of Candy on Halloween'</a> at around 1.5 Billion views and 
           <a href="https://www.youtube.com/shorts/IQxea9UB1nQ" target="_blank">'$100,000,000 Car Doors'</a> at around 1.2 Billion views.
 
-          We can see a reoccuring theme here. These videos are YouTube Shorts, which are essentially YouTube videos in a short, scrollable form, lasting less than 3 minutes long. So creating shorts can increases your chances to gain more exposure and views, but it will not increase your profits as much as long form videos.
+          We can see a reoccuring theme here. These videos are YouTube Shorts, which are essentially YouTube videos in a short, scrollable form, lasting less than 3 minutes long. Creating shorts can increases your chances to gain more exposure and views, but it will not increase your profits as much as long form videos.
         `
         
         ;
@@ -406,10 +419,9 @@
       if (idiom.description) {
         const descEl = document.createElement('p');
         descEl.className = 'idiom-description';
-        descEl.textContent = idiom.description;
-        
+        descEl.innerHTML = idiom.description;   // <-- use innerHTML instead of textContent
         descEl.style.lineHeight = "1.5";
-
+        
           // Reduce spacing specifically for the word cloud description
         if (idiom.file.includes('word-cloud.json')) {
             descEl.style.marginTop = '-100px';    // Less space above
