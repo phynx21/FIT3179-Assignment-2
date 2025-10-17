@@ -53,9 +53,10 @@
         "color": {
           "field": "Penetration_num",
           "type": "quantitative",
-          "scale": { "scheme": "blues", "domainMin": 0 },
-          "title": "YouTube Penetration Rate"
-        },
+          "scale": { "scheme": "blues", "domainMin": 0},
+          "title": "YouTube Penetration Rate",
+          "legend": {"labelExpr": "datum.label + '%'"}
+            },
         "tooltip": [
           { "field": "properties.name", "type": "nominal", "title": "Country" },
           { "field": "Penetration_tooltip", "type": "nominal", "title": "Penetration" },

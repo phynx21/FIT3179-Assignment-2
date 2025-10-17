@@ -2,7 +2,7 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "width": 700,
     "height": 500,
-    "title": "Top 1000 YouTube Channels",
+    "title": "Top 100 YouTube Channels",
     "data": {
         "url": "data/global-youtube-statistics.csv",
         "format": {
@@ -10,13 +10,13 @@
         }
     },
     "transform": [
-        {
-            "filter": "datum.subscribers > 0 && datum['video views'] > 0"
-        },
-        {
-            "calculate": "datum.category == null || datum.category == 'nan' ? 'Misc' : datum.category",
-            "as": "category_clean"
-        }
+    {
+        "filter": "datum.subscribers > 0 && datum['video views'] > 0"
+    },
+    {
+        "calculate": "datum.category == null || datum.category == 'nan' ? 'Misc' : datum.category",
+        "as": "category_clean"
+    }
     ],
     "selection": {
         "zoom": {
