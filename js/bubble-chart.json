@@ -2,7 +2,7 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "width": 700,
     "height": 500,
-    "title": "Top 100 YouTube Channels",
+    "title": "Top 1000 YouTube Channels",
     "data": {
         "url": "data/global-youtube-statistics.csv",
         "format": {
@@ -10,13 +10,13 @@
         }
     },
     "transform": [
-    {
-        "filter": "datum.subscribers > 0 && datum['video views'] > 0"
-    },
-    {
-        "calculate": "datum.category == null || datum.category == 'nan' ? 'Misc' : datum.category",
-        "as": "category_clean"
-    }
+        {
+            "filter": "datum.subscribers > 0 && datum['video views'] > 0"
+        },
+        {
+            "calculate": "datum.category == null || datum.category == 'nan' ? 'Misc' : datum.category",
+            "as": "category_clean"
+        }
     ],
     "selection": {
         "zoom": {
@@ -25,9 +25,7 @@
         },
         "categoryHighlight": {
             "type": "multi",
-            "fields": [
-                "category_clean"
-            ],
+            "fields": ["category_clean"],
             "bind": "legend",
             "empty": "all"
         },
@@ -65,16 +63,31 @@
             "title": "Category",
             "scale": {
                 "domain": [
-                "Music", "Film & Animation", "Entertainment", "Education", "Shows",
-                "People & Blogs", "Gaming", "Sports", "Howto & Style", "News & Politics",
-                "Comedy", "Trailers", "Nonprofits & Activism", "Science & Technology",
-                "Movies", "Pets & Animals", "Autos & Vehicles", "Travel & Events", "Misc"
+                    "Music", "Film & Animation", "Entertainment", "Education", "Shows",
+                    "People & Blogs", "Gaming", "Sports", "Howto & Style", "News & Politics",
+                    "Comedy", "Trailers", "Nonprofits & Activism", "Science & Technology",
+                    "Movies", "Pets & Animals", "Autos & Vehicles", "Travel & Events", "Misc"
                 ],
                 "range": [
-                "#e41a1c", "#377eb8", "#4daf4a", "#984ea3", "#ff7f00",
-                "#9D8420", "#a65628", "#f781bf", "#3D3B8E", "#66c2a5",
-                "#fc8d62", "#8da0cb", "#e78ac3", "#a6d854", "#00241B",
-                "#7C6354", "#60594D", "#1b9e77", "#8c8c8c"
+                    "#E69F00",  
+                    "#0072B2", 
+                    "#56B4E9",  
+                    "#D9B100",  
+                    "#6A3D9A",  
+                    "#D55E00",  
+                    "#CC79A7",  
+                    "#999999",  
+                    "#8DD3C7",  
+                    "#FB8072", 
+                    "#80B1D3", 
+                    "#FDB462",  
+                    "#B3DE69", 
+                    "#BC80BD", 
+                    "#D4A017", 
+                    "#1F78B4",  
+                    "#33A02C",  
+                    "#009E73",  
+                    "#B15928"   
                 ]
             }
         },
@@ -84,10 +97,7 @@
             "title": "Uploads",
             "scale": {
                 "type": "sqrt",
-                "range": [
-                    20,
-                    400
-                ]
+                "range": [20, 400]
             }
         },
         "opacity": {
